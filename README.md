@@ -9,7 +9,7 @@ As an avid cyclist I was interested in the areas I should not be cycling in, esp
 
 My analysis was performed in SQL.  I used a temporary table to sumarize a count of DUI citations, grouped by streets and intersections.  Then I used a cross join to append this to a query in order to find the number of total DUIs that took place at any given street or intersection as a percentage of the total.
 
-My data showed that 9.8% of DUIs took place along Indian School Road.  The top intersection was Indian School and Hayden(3.6%), the closest intersection to where I live.
+My data showed that 9.8% of DUIs took place along Indian School Road.  The top intersection was Indian School and Hayden(3.6%), the closest intersection to where I live.  
 
 Further analysis to consider: are specific streets and intersections associated with DUIs at certain times of day?
 

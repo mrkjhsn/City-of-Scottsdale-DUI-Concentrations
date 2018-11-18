@@ -56,7 +56,7 @@
 	               ,count([Charge Description]) as _Count_
                    from [dbo].[spd_PDCitations$]
                    where [Charge Description] like '%DUI%'
-                   group by [Street]) as C  --interestingly "C" is needed here, even though I'm not calling "C" anywhere else in the querry
+                   group by [Street]) as C  --interestingly an alias is needed here, even though I'm not calling the alias anywhere else in the querry
  ) as B
 			   
   group by A.[Street], A._Count_, (convert(float, A._Count_)/convert(float, B._Total_)*100)

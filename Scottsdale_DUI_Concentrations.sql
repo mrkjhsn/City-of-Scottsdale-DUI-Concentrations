@@ -21,5 +21,43 @@
   cross join (select sum(_Count_) as _Total_
 			 from #DUI_Percent
 			 ) as B
-  group by A.[Street], A._Count_, ((convert(float, A._Count_)/convert(float, B._Total_)*100))
+  group by A.[Street], A._Count_, (convert(float, A._Count_)/convert(float, B._Total_)*100)
+  order by _Percent_ desc
+
+
+  --perform the above, but instead embed the temporary table within the "from" clause
+
+  select 
+	 A.[Street]
+	 ,A._Count_
+	 ,convert(varchar,
+			round(
+				 convert(float, A._Count_)/convert(float, B._Total_)*100
+				 ,2
+			 )
+	 ) + '%'as _Percent_
+  from    (
+		  select 
+	      [Street]
+		  ,count([Charge Description]) as _Count_
+		  from [dbo].[spd_PDCitations$]
+		  where [Charge Description] like '%DUI%'
+		  group by [Street]
+		  
+  ) as A
+
+  cross join  (
+				select 
+			    sum(_Count_) as _Total_
+			    from (
+				
+				  select 
+					[Street]
+	               ,count([Charge Description]) as _Count_
+                   from [dbo].[spd_PDCitations$]
+                   where [Charge Description] like '%DUI%'
+                   group by [Street]) as C  --interestingly "C" is needed here, even though I'm not calling "C" anywhere else in the querry
+ ) as B
+			   
+  group by A.[Street], A._Count_, (convert(float, A._Count_)/convert(float, B._Total_)*100)
   order by _Percent_ desc

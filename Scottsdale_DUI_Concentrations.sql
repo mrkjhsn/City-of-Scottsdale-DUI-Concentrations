@@ -25,7 +25,8 @@
   order by _Percent_ desc
 
 
-  --perform the above, but instead embed the temporary table within the "from" clause
+  --performs the same as the above, but instead embed the temporary table within the "from" clause.
+  --the temp table must run twice, which will invariably make this query slower than the above.
 
   select 
 	 A.[Street]

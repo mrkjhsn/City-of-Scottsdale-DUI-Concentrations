@@ -13,5 +13,6 @@ My analysis was performed in SQL.  I used a temporary table to sumarize a count 
 My data showed that 9.8% of DUIs took place along Indian School Road.  The top intersection was Indian School and Hayden(3.6%), the closest intersection to where I live.  
 
 #### Further Things to Consider: 
-Are specific streets and intersections associated with DUIs at certain times of day?
+1. Are specific streets and intersections associated with DUIs at certain times of day?
+2. Is it possible to graphically show a cluster map of the count associated with streets and intersections?
 

@@ -62,3 +62,9 @@
 			   
   group by A.[Street], A._Count_, (convert(float, A._Count_)/convert(float, B._Total_)*100)
   order by _Percent_ desc
+
+  --find just DUI citations
+  select *
+  from [dbo].[spd_PDCitations$]
+  where [Charge Description] like '%DUI%'
+  

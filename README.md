@@ -10,7 +10,9 @@ As a cyclist I was interested in the areas I should not be cycling in, especiall
 My analysis was performed in SQL.  I used a temporary table to sumarize a count of DUI citations, grouped by streets and intersections.  Then I used a cross join to append this to a query in order to find the number of total DUIs that took place at any given street or intersection as a percentage of the total.
 
 #### Results:
-My data showed that 9.8% of DUIs took place along Indian School Road.  The top intersection was Indian School and Hayden(3.6%).  This seems to be consistent with the high number of drinking establishments in Old Town Scottsdale.  
+1. My data showed that the road associated with the highest number of DUIs with Indian School with 9.8%.  This makes sense since Indian School Road is the primary east/west corridor running through Old Town Scottsdale(an area of town with a high concentration of drinking establishments).
+2. The top intersection associated with DUI citations was Indian School and Hayden with 3.6%.  This surprised me since Scottsdale Road is the primary north/south corridor running through Old Town Scottsdale.
+3.  Approximately 35% of DUIs were issued between 1 and 3AM.
 
 #### Further Things to Consider: 
 1. Correlate DUI counts with times of the day.

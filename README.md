@@ -14,6 +14,5 @@ My data showed that 9.8% of DUIs took place along Indian School Road.  The top i
 
 #### Further Things to Consider: 
 1. Correlate DUI counts with times of the day.
-2. Are specific streets and intersections associated with DUIs at certain times of day?
-3. Is it possible to graphically show a cluster map of the count associated with streets and intersections?  This doesn't seem possible based on the data provided at this time.  For instance Hayden Rd. runs from 15000 in the north to 1000 in the South.  If a citation occurs in eiher of those locations it will appear as 1XXX.
+2. ~~Is it possible to graphically show a cluster map of the count associated with streets and intersections?~~  This doesn't seem possible based on the data provided at this time.  For instance Hayden Rd. runs from 15000 in the north to 1000 in the South.  If a citation occurs in eiher of those locations it will appear as 1XXX.
 

@@ -68,3 +68,29 @@
   from [dbo].[spd_PDCitations$]
   where [Charge Description] like '%DUI%'
   
+
+  -- based on histogram, most DUIs take place between 2 - 3AM
+  -- what percent of total DUIs take place between these times?  Approximately 35%
+  select 
+	 A.DUIs_between_2_and_3am
+	,B.DUIs_total
+	,convert(varchar,
+		round(
+			convert(float,A.DUIs_between_2_and_3am)/convert(float,B.DUIs_total)*100
+			,2
+		)
+	)  + '%' as _Percent_
+  from (
+		select 
+		count([Citation Time]) as DUIs_between_2_and_3am
+		from [dbo].[spd_PDCitations$]
+		where [Citation Time] between 100 and 300 and 
+		[Charge Description] like '%DUI%'
+		) as A
+  cross join   (
+				select 
+				count([Citation Time]) as DUIs_total
+				from [dbo].[spd_PDCitations$]
+				where [Charge Description] like '%DUI%'
+				) as B
+  group by A.DUIs_between_2_and_3am, B.DUIs_total

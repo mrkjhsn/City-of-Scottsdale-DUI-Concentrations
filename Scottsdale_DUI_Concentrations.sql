@@ -63,12 +63,6 @@
   group by A.[Street], A._Count_, (convert(float, A._Count_)/convert(float, B._Total_)*100)
   order by _Percent_ desc
 
-  --find just DUI citations
-  select *
-  from [dbo].[spd_PDCitations$]
-  where [Charge Description] like '%DUI%'
-  
-
   -- based on histogram, most DUIs take place between 2 - 3AM
   -- what percent of total DUIs take place between these times?  Approximately 35%
   select 

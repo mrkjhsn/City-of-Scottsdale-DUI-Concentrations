@@ -1,3 +1,4 @@
+
 --create temporary table including just DUI citations and grouping citations by the street locations they take place at
   select 
 	 [Street]
@@ -6,6 +7,9 @@
   from [dbo].[spd_PDCitations$]
   where [Charge Description] like '%DUI%'
   group by [Street]
+
+  select * from #DUI_Percent
+
 
   --use temp table to find percent of DUIs at specific streets and intersections across Scottsdale
     select 

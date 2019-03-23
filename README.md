@@ -1,7 +1,7 @@
 # City of Scottsdale DUI Concentrations
 Where do most City of Scottsdale DUI citations occur? 
 
-The City of Scottsdale publishes a [dataset](http://data.scottsdaleaz.gov/dataset/police-citations) that includes all citations issed on a one year rolling basis.
+The City of Scottsdale publishes a [dataset](http://data.scottsdaleaz.gov/dataset/police-citations)* that includes all citations issed on a one year rolling basis.
 
 
 
@@ -18,3 +18,5 @@ My analysis was performed in SQL.  I used a temporary table to sumarize a count 
 1. Correlate DUI counts with times of the day.
 2. ~~Is it possible to graphically show a cluster map of the count associated with streets and intersections?~~  This doesn't seem possible based on the data provided at this time.  For instance, Hayden Rd. runs from 15000 in the north to 1000 in the South.  If a citation occurs in eiher of those locations it will appear as 1XXX.  For other streets in Scottsdale that aren't as long this analysis may be possible.
 
+
+*Contains information from the City of Scottsdale Open Database Portal, which is made available here under the [Open Database License](http://www.scottsdaleaz.gov/AssetFactory.aspx?did=69351).
